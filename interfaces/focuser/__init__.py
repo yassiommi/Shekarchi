@@ -330,6 +330,6 @@ class __Focuser:
 #
 # focuser = __Focuser()
 
-focusera = Focuser(A, 22006, 21960)
-focuserb = Focuser(B)
-focuserc = Focuser(C,22120, 22054)
+# focusera = Focuser(A, 22006, 21960)
+# focuserb = Focuser(B)
+# focuserc = Focuser(C,22120, 22054)

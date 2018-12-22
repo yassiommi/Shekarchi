@@ -84,9 +84,7 @@ def observe(ra, dec, time, temperature, binning, interval, count, id, count2):
         target = SkyCoord(ra=ra, dec=dec, unit='deg')
 
         altaz = mount.celestical_to_horizontal(target)
-#        cloud = Cloud()
- #       if not cloud.is_observable(altaz.alt,altaz.az):
-  #          raise BadConditionsException()
+            raise BadConditionsException()
 
         interruption_handling()
 #        enclosure.open()
