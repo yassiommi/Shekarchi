@@ -1,0 +1,17 @@
+{
+  "name": "mount-interface",
+  "version": "1.0.0",
+  "description": "forked from Sohrab's code",
+  "main": "mock_mount.js",
+  "scripts": {
+    "mock": "mock_mount.js",
+    "main": "mount.js"
+  },
+  "author": "Sohrab Sheikhani",
+  "license": "Proprietary",
+  "dependencies": {
+    "commander": "^2.16.0",
+    "multiline": "^1.0.2",
+    "sleep": "^5.1.1"
+  }
+}

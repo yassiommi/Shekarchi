@@ -1,0 +1,28 @@
+# python compiled
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ides
+.buildconfig
+tags.*
+.idea/
+
+# macosx -_-
+.DS_Store
+.DS_Store?
+
+# python venv
+venv/
+venv2/
+
+# nodejs
+npm-debug.log*
+node_modules/
+
+# outputs
+out/logs/
+out/images/
+
+# windi
+ccd_base_config.txt

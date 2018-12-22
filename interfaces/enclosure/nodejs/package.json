@@ -1,0 +1,14 @@
+{
+  "name": "enclosure-interface",
+  "version": "1.0.0",
+  "description": "forked from Mahyar's code",
+  "main": "plc.js",
+  "scripts": {
+    "plc": "plc.js"
+  },
+  "author": "Mahyar Taghavi",
+  "license": "Proprietary",
+  "dependencies": {
+    "plc": "^0.3.0"
+  }
+}
