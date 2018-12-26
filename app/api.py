@@ -121,7 +121,8 @@ def get_weather_status():
 def get_image_back():
     image = request.files['file']
     print(image)
-    image.save('./out/images/' + request.data['id'] + request.data['ccd'] + '/' + image.filename)
+    #image.save('./out/images/' + request.data['id'] + request.data['ccd'] + '/' + image.filename)
+    image.save('./run/user/1000/gvfs/smb-share\:server\=nas-la-ino.local\,share\=wfs_data/' + request.data['id'] + request.data['ccd'] + '/' + image.filename)
     return 'gir nayoft.'
 
 @flask.route('/get_latest_image')
