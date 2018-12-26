@@ -19,15 +19,15 @@ class __CCD(AbsCCD):
     def __init__(self):
         pass
 
-    def capture(self, time, temperature, binning, interval, count, typee):
+    def capture(self, time, temperature, binning, interval, count, typee, idd):
         print(count)
         for i in range(int(count)):
             requests.post('http://172.18.1.30:5000/capture', json = {'binning' : str(binning), 'temperature' : str(temperature),
-            'exposure_time' : str(time), 'interval' : str(interval), 'type' : typee, 'chiz': str(int(count) - i)})
+            'exposure_time' : str(time), 'interval' : str(interval), 'type' : typee, 'chiz': str(int(count) - i)}, 'id': str(idd))
             requests.post('http://172.18.1.31:5000/capture', json = {'binning' : str(binning), 'temperature' : str(temperature),
-            'exposure_time' : str(time), 'interval' : str(interval), 'type' : typee, 'chiz': str(int(count) - i)})
+            'exposure_time' : str(time), 'interval' : str(interval), 'type' : typee, 'chiz': str(int(count) - i)}, 'id': str(idd))
             requests.post('http://172.18.1.32:5000/capture', json = {'binning' : str(binning), 'temperature' : str(temperature),
-            'exposure_time' : str(time), 'interval' : str(interval), 'type' : typee, 'chiz': str(int(count) - i)})
+            'exposure_time' : str(time), 'interval' : str(interval), 'type' : typee, 'chiz': str(int(count) - i)}, 'id': str(idd))
 
     def get_temperature(self):
         pass

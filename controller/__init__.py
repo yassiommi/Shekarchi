@@ -101,18 +101,18 @@ def observe(ra, dec, time, temperature, binning, interval, count, id, count2):
             #   CAPTURE BIASES BEFORE STARTING
         interruption_handling()
         logger.debug('Capturing bias images.')
-        ccd.capture(time=time, temperature=temperature, binning = binning, interval=interval, count=count2, typee='bias')
+        ccd.capture(time=time, temperature=temperature, binning = binning, interval=interval, count=count2, typee='bias', idd = id)
 
          #   CAPTURE DARKS BEFORE STARTING
         interruption_handling()
         logger.debug('Capturing dark images.')
-        ccd.capture(time=time, temperature=temperature, binning=binning, interval=interval,count=count2, typee='dark')
+        ccd.capture(time=time, temperature=temperature, binning=binning, interval=interval,count=count2, typee='dark', idd = id)
 
         interruption_handling()
         focusera = Focuser(A, 22006, 21960)
         focuserb = Focuser(B, 22006, 21960)
         focuserc = Focuser(C, 22120, 22054)
-        ccd.capture(time=time, temperature=temperature, binning=binning, interval=interval, count=count, typee='light')
+        ccd.capture(time=time, temperature=temperature, binning=binning, interval=interval, count=count, typee='light', idd = id)
 
         logger.debug('Observation successfully ended.')
     finally:
@@ -124,13 +124,13 @@ def observe(ra, dec, time, temperature, binning, interval, count, id, count2):
         bias_captures = {}
         logger.debug('Capturing bias images.')
         print(time, temperature, binning, interval, count2)
-        ccd.capture(time=time, temperature=temperature, binning=binning, interval=interval,  count=count2, typee='bias')
+        ccd.capture(time=time, temperature=temperature, binning=binning, interval=interval,  count=count2, typee='bias', idd = id)
 
                #   CAPTURE DARKS AFTER FINISHING
         interruption_handling()
         logger.debug('Capturing dark images.')
         dark_captures = {}
-        ccd.capture(time=time, temperature=temperature, binning=binning, interval=interval, count=count2, typee='dark')
+        ccd.capture(time=time, temperature=temperature, binning=binning, interval=interval, count=count2, typee='dark', idd = id)
 
     mount.meridian_tracking_correction()
     mount.park()
