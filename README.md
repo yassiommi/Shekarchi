@@ -1,4 +1,4 @@
-# Sherkarchi
+# Shekarchi
 
 Lens Array microservice
 
